@@ -112,3 +112,23 @@ solve(initial, empty_tile_pos, final)
 
 
 # Output
+
+
+''' The code begins by importing the necessary modules and defining the size of the puzzle grid (n) and the possible movements for each tile represented by row and col arrays.
+The priorityQueue class is defined to implement a priority queue using a heap.
+The node class represents a node in the search tree. Each node contains information such as its parent, the state of the puzzle (mat), the position of the empty tile (empty_tile_pos), the cost, and the level of the node in the search tree.
+The calculateCost function calculates the number of misplaced tiles (count) in the current puzzle state compared to the final state.
+The newNode function creates a new node by swapping the empty tile position with a neighboring tile. It calculates the cost of the new state and returns the new node.
+The printMatrix function is used to print the current state of the puzzle grid.
+The isSafe function checks if a given position (x, y) is within the puzzle grid boundaries.
+The printPath function prints the path from the initial state to the goal state by recursively traversing the parent nodes.
+The solve function takes the initial state of the puzzle, the position of the empty tile, and the final state as input. It initializes a priority queue (pq) and creates the root node using the initial state. The cost of the root node is calculated.
+The root node is pushed into the priority queue.
+The main loop continues until the priority queue is empty. In each iteration, the node with the minimum cost is popped from the priority queue (minimum).
+If the cost of the minimum node is 0, it means the goal state has been reached. The printPath function is called to print the path from the initial state to the goal state.
+If the goal state is not reached, the code generates the child nodes by swapping the empty tile with its neighboring tiles (up, left, down, right). It creates a new node for each valid swap and calculates the cost of the new state.
+The child nodes are pushed into the priority queue.
+The process continues until the goal state is reached or the priority queue is empty.
+The code defines the initial and final states of the puzzle and the position of the empty tile.
+The solve function is called with the initial state, empty tile position, and final state to solve the 8-puzzle problem.
+The code finds the solution path from the initial state to the final state using the A* algorithm and prints each step of the path.  '''
