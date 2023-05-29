@@ -55,3 +55,35 @@ addEdge(2, 3, 4)
 KruskalMST()
 
 #Output
+
+''' The code initializes an empty list graph to store the edges of the graph and sets the number of vertices V to 4.
+
+The addEdge function is defined to add an edge to the graph. It takes three parameters: the source vertex u, the destination vertex v, and the weight w of the edge. It appends the edge information as a list [u, v, w] to the graph list.
+
+The find function is a helper function for finding the parent of a vertex in a disjoint set. It uses the path compression technique to optimize the find operation. It takes the parent array and a vertex i as parameters and recursively finds the parent of i. It also performs path compression by updating the parent of i to the root parent.
+
+The union function is a helper function for performing the union operation of two sets. It takes the parent array, rank array, two vertices x and y, and merges the sets containing x and y. It uses the rank array to optimize the union operation by attaching the smaller rank tree to the root of the higher rank tree.
+
+The KruskalMST function implements Kruskal's algorithm to find the Minimum Spanning Tree. It initializes an empty list result to store the edges of the MST.
+
+The graph list is sorted in non-decreasing order based on the edge weights using the sort method and a lambda function as the key.
+
+The parent and rank lists are initialized for the disjoint set data structure. Each vertex is initially its own parent, and the rank is set to 0.
+
+The algorithm iterates through each edge in the sorted graph list. It checks if the source vertex u and destination vertex v are in different sets (i.e., they have different parents). If they are in different sets, it means adding the edge (u, v) to the MST will not create a cycle.
+
+If u and v are in different sets, the edge is added to the result list, and the union operation is performed to merge the sets containing u and v.
+
+The algorithm continues this process until it has added V - 1 edges to the result list, where V is the number of vertices in the graph.
+
+The total weight of the MST is calculated by summing the weights of all the edges in the result list.
+
+The code then prints the edges and their weights in the MST using a loop over the result list.
+
+Finally, it prints the minimum cost of the MST.
+
+The addEdge function is called to add edges to the graph.
+
+The KruskalMST function is called to find the MST and print the results.
+
+In summary, the code demonstrates the implementation of Kruskal's algorithm to find the Minimum Spanning Tree of a graph. It uses a disjoint set data structure to efficiently check for cycles and merge sets during the process. The resulting MST is printed along with its minimum cost.'''
