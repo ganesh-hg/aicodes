@@ -64,3 +64,27 @@ def play_game():
         current_player = "O" if current_player == "X" else "X"
 
 play_game()
+
+
+
+''' The print_board function takes a 2D list board representing the Tic-Tac-Toe board and prints it in a visually appealing format. It uses a nested loop to iterate over each row in the board and prints the elements separated by | using the join function. After printing each row, it prints a horizontal line of dashes to separate the rows.
+
+The check_winner function takes a 2D list board and checks for a winning condition. It checks for three in a row in rows, columns, and diagonals. It uses nested loops to iterate over the rows and columns of the board and checks if the elements in a row, column, or diagonal are equal and not equal to "_". If a winning condition is found, it returns the winning player's symbol ("X" or "O"). Otherwise, it returns None to indicate that there is no winner yet.
+
+The is_board_full function takes a 2D list board and checks if the board is full (i.e., all positions are filled with symbols). It uses a nested loop to iterate over the board and checks if any position contains "_". If there is any "_", it returns False to indicate that the board is not full. Otherwise, it returns True to indicate that the board is full.
+
+The play_game function is the main function that runs the Tic-Tac-Toe game. It initializes the board as a 2D list representing the Tic-Tac-Toe board, with all positions initially filled with "_". It also initializes the current_player variable with the symbol of the current player ("X" or "O").
+
+The game is played in an infinite loop until a winner is found or the board is full. Inside the loop:
+
+The print_board function is called to display the current state of the board.
+The current player is displayed.
+The user is prompted to enter the row and column numbers (0-2) for their move.
+The code checks if the chosen position is already occupied. If it is, an error message is displayed, and the loop continues to the next iteration.
+If the chosen position is valid and available, the symbol of the current player is placed in that position on the board.
+The check_winner function is called to check if the current player has won. If a winner is found, the current state of the board is displayed, and a message is printed indicating the winner. The loop is then exited.
+If there is no winner, the is_board_full function is called to check if the board is full. If it is, the current state of the board is displayed, and a message is printed indicating a draw. The loop is then exited.
+If the game is not over yet, the turn is switched to the other player by updating the current_player variable.
+The play_game() function is called to start the Tic-Tac-Toe game.
+
+Overall, the code provides a basic implementation of a command-line Tic-Tac-Toe game. Players take turns entering their moves, and the code checks for a winning condition or a draw after each move. The game continues until a winner is found or the board is full. '''
